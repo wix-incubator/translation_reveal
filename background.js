@@ -16,10 +16,13 @@ chrome.storage.onChanged.addListener(function (changes) {
 });
 
 chrome.webRequest.onBeforeRequest.addListener(function () {
-  return shouldRevealTranslation ? {cancel: true} : {cancel: false};
-}, {urls: ["*://static.parastorage.com/services/scheduler-client*scripts/locale/messages_en.js",
-            "*://static.parastorage.com/services/scheduler-owner-statics*scripts/locale/messages_en.js"]
-  , types: ["script"]}, ["blocking"]);
+    return shouldRevealTranslation ? {cancel: true} : {cancel: false};
+  }, {
+    urls: ["*://static.parastorage.com/services/scheduler-client*locale/messages_en.js",
+      "*://static.parastorage.com/services/scheduler-owner-statics*locale/messages_en.js",
+      "*://static.parastorage.com/services/scheduler-owner-statics*locale/messages_en.json"]
+  }
+  , ["blocking"]);
 
 chrome.storage.sync.get(isTranslationReveal, function (items) {
   shouldRevealTranslation = items[isTranslationReveal];
