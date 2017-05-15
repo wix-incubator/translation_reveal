@@ -6,8 +6,7 @@ function onLoad() {
   var translateRevealToggle = document.getElementById('translateReveal');
 
   translateRevealToggle.addEventListener('change', function () {
-    var t = translateRevealToggle;
-    saveChanges(t.checked);
+    saveChanges(translateRevealToggle.checked);
   });
 
   chrome.storage.sync.get(isTranslationReveal, function (items) {
@@ -16,9 +15,7 @@ function onLoad() {
 }
 
 function saveChanges(isTranslationReveal) {
-  chrome.storage.sync.set({isTranslationReveal: isTranslationReveal}, function () {
-    console.log('Settings saved');
-  });
+  chrome.storage.sync.set({isTranslationReveal: isTranslationReveal});
 }
 
 document.addEventListener('DOMContentLoaded', onLoad, false);

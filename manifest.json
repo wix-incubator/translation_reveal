@@ -10,7 +10,7 @@
   ],
   "browser_action": {
     "default_title": "Translate Reveal",
-    "default_icon": "green.png",
+    "default_icon": "unreveal-state.png",
     "default_popup": "popup.html"
   },
   "manifest_version": 2,
