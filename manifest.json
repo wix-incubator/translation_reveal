@@ -1,0 +1,23 @@
+{
+  "name": "Translate Reveal",
+  "version": "1.1",
+  "description": "Reveal the translation keys",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "https://static.parastorage.com/"
+  ],
+  "browser_action": {
+    "default_title": "Translate Reveal",
+    "default_icon": "green.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  }
+}
