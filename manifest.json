@@ -2,22 +2,19 @@
   "name": "Translate Reveal",
   "version": "1.1",
   "description": "Reveal the translation keys",
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "storage",
-    "https://static.parastorage.com/"
-  ],
+  "permissions": ["webRequest", "webRequestBlocking", "storage", "https://static.parastorage.com/"],
+  "icons": { "16": "icons/reveal-state.png",
+           "48": "icons/reveal-state48.png",
+          "128": "icons/reveal-state128.png" 
+        },
   "browser_action": {
     "default_title": "Translate Reveal",
-    "default_icon": "unreveal-state.png",
+    "default_icon": "icons/unreveal-state.png",
     "default_popup": "popup.html"
   },
   "manifest_version": 2,
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["background.js"],
     "persistent": true
   }
 }

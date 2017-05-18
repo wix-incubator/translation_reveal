@@ -1,0 +1,5 @@
+*.iml
+*.sublime-workspace
+.DS_Store
+.idea
+.baseDir.ts

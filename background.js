@@ -5,9 +5,9 @@ var isTranslationReveal = 'isTranslationReveal';
 
 function notifyRevealChanged(isTranslationReveal) {
   if (isTranslationReveal) {
-    chrome.browserAction.setIcon({path: 'reveal-state.png'});
+    chrome.browserAction.setIcon({path: 'icons/reveal-state.png'});
   } else {
-    chrome.browserAction.setIcon({path: 'unreveal-state.png'});
+    chrome.browserAction.setIcon({path: 'icons/unreveal-state.png'});
   }
 }
 
@@ -22,7 +22,9 @@ chrome.webRequest.onBeforeRequest.addListener(function () {
     urls: [
       '*://static.parastorage.com/services/scheduler-client*locale/messages_en.js',
       '*://static.parastorage.com/services/scheduler-owner-statics*locale/messages_en.js',
-      '*://static.parastorage.com/services/scheduler-owner-statics*locale/messages_en.json'
+      '*://static.parastorage.com/services/scheduler-owner-statics*locale/messages_en.json',
+      '*://static.parastorage.com/services/scheduler-widget/*/locale/viewer-en.js',
+      '*://static.parastorage.com/services/scheduler-widget/*/locale/settings-en.js'
     ]
   }
   , ['blocking']);
